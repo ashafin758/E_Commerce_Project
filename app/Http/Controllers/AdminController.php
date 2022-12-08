@@ -25,6 +25,6 @@ class AdminController extends Controller
     {
         $data=catagory::find($id);
         $data->delete();
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Catagory Deleted Successfully');
     }
 }
